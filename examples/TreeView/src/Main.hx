@@ -44,12 +44,12 @@ class Main extends Sprite {
 			var item3 = tree.treeRoot.addItem( { text: "Item 3" } );
 			
 			item1.addItem( { text: "Item 1.1" } ); 
-			var item2_1 = item2.addItem( { text: "Item 1", itemIcon: "img/icons/folder.png" } );
+			var item2_1 = item2.addItem( { text: "Item 2.1", itemIcon: "img/icons/folder.png" } );
 			item3.addItem( { text: "Item 3.1", itemIcon: "img/icons/burger.png" } ); 
 			
 			item2_1.addItem( { text: "Item 2.1.2", itemIcon: "img/icons/cherry.png" } );
 			item2_1.addItem( { text: "Item 2.1.3", itemIcon: "img/icons/butterfly.png" } );
-			var item2_1_4 = item2_1.addItem( { text: "Item 1", itemIcon: "img/icons/folder.png" } );
+			var item2_1_4 = item2_1.addItem( { text: "Item 2.1.4", itemIcon: "img/icons/folder.png" } );
 			
 			var a = item2_1_4.addItem( { text: "Item 2.1.4.1" } );
 			
