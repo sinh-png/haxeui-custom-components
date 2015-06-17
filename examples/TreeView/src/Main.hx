@@ -57,14 +57,14 @@ class Main extends Sprite {
 			
 			tree.enableContextMenu = true;
 			
-			tree.contextMenu.addMenuItem("Hide root", function(menuItem:ContextMenuItem) {
+			tree.contextMenu.addItem("Hide root", function(menuItem:ContextMenuItem) {
 				tree.showRoot = !tree.showRoot;
 				menuItem.text = (tree.showRoot) ? "Hide root" : "Show root";
 			});
 			
-			tree.contextMenu.addMenuSeparator();
+			tree.contextMenu.addSeparator();
 			
-			var menuItemAdd = tree.contextMenu.addMenuItem("Add item", function(menuItem) {
+			var menuItemAdd = tree.contextMenu.addItem("Add item", function(menuItem) {
 				var selectedItem = (tree.selectedIndex == -1) ? tree.treeRoot : tree.selectedTreeItem;
 				
 				var vbox = new VBox();
@@ -114,7 +114,7 @@ class Main extends Sprite {
 				});
 			});
 			
-			var menuItemRemove = tree.contextMenu.addMenuItem("Remove item", function(menuItem) {
+			var menuItemRemove = tree.contextMenu.addItem("Remove item", function(menuItem) {
 				tree.selectedTreeItem.remove();
 			});
 			

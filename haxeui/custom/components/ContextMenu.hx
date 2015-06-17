@@ -70,14 +70,14 @@ class ContextMenu extends Menu {
 	
 	///////////////////////////////////////////////////////////////
 	
-	public function addMenuItem(text:String, ?on_select:ContextMenuItem->Void):ContextMenuItem {
+	public function addItem(text:String, ?on_select:ContextMenuItem->Void):ContextMenuItem {
 		var item = new ContextMenuItem();
 		item.text = text;
 		item.userData = { onClick: on_select };
 		return cast addChild(item);
 	}
 	
-	public function addMenuSeparator():MenuSeparator {
+	public function addSeparator():MenuSeparator {
 		return cast addChild(new MenuSeparator());
 	}
 	
