@@ -47,7 +47,7 @@ class Main extends Sprite {
 			item2_1.addItem( { text: "Item 2.1.1", icon: "img/icons/cherry.png" } );
 			item2_1.addItem( { text: "Item 2.1.2", icon: "img/icons/butterfly.png" } );
 			item2_1.addItem( { text: "Item 2.1.3", icon: "img/icons/folder.png" } )
-				.addItem( { text: "Item 2.1.4.1" } );
+				.addItem( { text: "Item 2.1.3.1" } );
 			
 			tree.treeRoot.addItem( { text: "Item 3" } )
 				.addItem( { text: "Item 3.1", icon: "img/icons/burger.png" } ); 
