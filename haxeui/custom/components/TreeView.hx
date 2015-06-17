@@ -157,6 +157,7 @@ class TreeViewItemContent {
 	}
 	
 	function _refreshRenderer(refresh_children:Bool = true, ?icon_bitmap:BitmapData):Void {
+		
 		var visible = true;
 		
 		if (Std.is(data.itemIcon, BitmapData)) icon_bitmap = data.itemIcon;

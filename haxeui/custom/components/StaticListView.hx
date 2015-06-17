@@ -90,6 +90,8 @@ class StaticListView extends ListView {
 	}
 	
 	public function removeListItem(item:IItemRenderer, refresh_style:Bool = true):Void {
+		if (_content.indexOfChild(item) < 0) return;
+		
 		var index = getListItemIndex(item);
 		_content.removeChild(item);
 		if (refresh_style) _refreshItemStyle(index);

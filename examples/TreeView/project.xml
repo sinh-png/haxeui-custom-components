@@ -16,12 +16,11 @@
 	<source path="src" />
 	<set name="openfl-legacy" />
 	<haxelib name="haxeui" />
-	<haxelib name="haxeui-custom" />
+	<haxelib name="haxeui-custom-components" />
 	
 	<!-- assets -->
 	<icon path="assets/openfl.svg" />
 	<assets path="assets/img" rename="img" />
-	<assets path="styles" rename="styles" />
 	
 	<!-- optimize output
 	<haxeflag name="-dce full" /> -->
