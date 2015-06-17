@@ -75,7 +75,7 @@ class Main extends Sprite {
 				vbox.addChild(hbox);
 				
 				var label = new Text();
-				label.text = "Item Name:";
+				label.text = "Name:";
 				hbox.addChild(label);
 				
 				var textInput = new TextInput();
