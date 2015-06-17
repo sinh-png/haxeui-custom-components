@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<haxelib name="haxeui" version="1.7.13"/>
+	
+	<section if="haxeui-embed-resources">
+		<assets path="assets/styles" embed="true" rename="styles"/>
+	</section>
+
+	<section unless="haxeui-embed-resources">
+		<assets path="assets/styles" rename="styles"/>
+	</section>
+	
+</project>

@@ -1,0 +1,18 @@
+{
+    "name": "haxeui-custom-components",
+    "license": "MIT",
+    "tags": [
+        "haxeui",
+        "ui"
+    ],
+    "description": "Custom components for HaxeUI.",
+    "contributors": [
+        "Hazame"
+    ],
+    "releasenote": "init",
+    "version": "0.0.1",
+    "url": "https://github.com/hazagames/haxeui-custom-components",
+    "dependencies": {
+        "haxeui": "1.7.13",
+    }
+}

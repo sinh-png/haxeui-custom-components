@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+  <!-- Output SWF options -->
+  <output>
+    <movie outputType="CustomBuild" />
+    <movie input="" />
+    <movie path="project.xml" />
+    <movie fps="60" />
+    <movie width="410" />
+    <movie height="480" />
+    <movie version="1" />
+    <movie minorVersion="0" />
+    <movie platform="Lime" />
+    <movie background="000000" />
+    <movie preferredSDK=";3.1.3;" />
+  </output>
+  <!-- Other classes to be compiled into your SWF -->
+  <classpaths>
+    <class path="W:\HaxeToolkit\haxe\lib\haxeui\1,7,13" />
+    <class path="W:\HaxeToolkit\haxe\lib\hscript\git" />
+    <class path="W:\HaxeToolkit\haxe\lib\svg\1,0,8" />
+    <class path="W:\HaxeToolkit\haxe\lib\lime\2,4,2" />
+    <class path="W:\HaxeToolkit\haxe\lib\actuate\1,8,6" />
+    <class path="W:\HaxeToolkit\haxe\lib\yagp\1,1,4" />
+    <class path="W:\HaxeToolkit\haxe\lib\openfl\3,0,6" />
+    <class path="W:\HaxeToolkit\haxe\lib\haxeui-custom\dev" />
+    <class path="src" />
+    <class path="bin\windows\neko\haxe" />
+  </classpaths>
+  <!-- Build options -->
+  <build>
+    <option directives="haxeui=1.7.13&#xA;hscript=2.0.4&#xA;svg=1.0.8&#xA;lime=2.4.2&#xA;actuate=1.8.6&#xA;yagp=1.1.4&#xA;openfl=3.0.6&#xA;haxeui-custom=0.0.0&#xA;openfl-next&#xA;tools=2.4.2&#xA;no-compilation&#xA;native&#xA;lime-native&#xA;openfl-native&#xA;windows&#xA;desktop" />
+    <option flashStrict="False" />
+    <option noInlineOnDebug="False" />
+    <option mainClass="ApplicationMain" />
+    <option enabledebug="True" />
+    <option additional="#--macro keep('IntIterator')&#xA;--remap flash:openfl&#xA;#--macro keep(&quot;Main&quot;)" />
+  </build>
+  <!-- haxelib libraries -->
+  <haxelib>
+    <!-- example: <library name="..." /> -->
+  </haxelib>
+  <!-- Class files to compile (other referenced classes will automatically be included) -->
+  <compileTargets>
+    <compile path="src\Main.hx" />
+  </compileTargets>
+  <!-- Paths to exclude from the Project Explorer tree -->
+  <hiddenPaths>
+    <hidden path="obj" />
+  </hiddenPaths>
+  <!-- Executed before build -->
+  <preBuildCommand>"$(CompilerPath)/haxelib" run lime build "$(OutputFile)" $(TargetBuild) -$(BuildConfig) -Dfdb</preBuildCommand>
+  <!-- Executed after build -->
+  <postBuildCommand alwaysRun="False" />
+  <!-- Other project options -->
+  <options>
+    <option showHiddenPaths="False" />
+    <option testMovie="Custom" />
+    <option testMovieCommand="" />
+  </options>
+  <!-- Plugin storage -->
+  <storage />
+</project>
