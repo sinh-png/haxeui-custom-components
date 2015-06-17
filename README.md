@@ -1,7 +1,7 @@
 
 ### HaxeUI Custom Components
 
-Unofficial custom components for HaxeUI.
+Unofficial custom components for [HaxeUI](http://haxeui.org/).
 
 Currently only support desktop gradient style.
 
