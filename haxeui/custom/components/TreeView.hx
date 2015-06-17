@@ -176,9 +176,9 @@ class TreeViewItemContent {
 			if (icon_bitmap == null) icon = (data.itemIcon != null) ? Assets.getBitmapData(data.itemIcon) : null;
 			else icon = icon_bitmap;
 			
-			if (countChildren() == 0) data.icon = UII.tree_empty_root__png;
-			else if (isOpening) data.icon = UII.tree_opened_root__png;
-			else data.icon = UII.tree_closed_root__png;
+			if (countChildren() == 0) data.icon = "styles/gradient/custom/tree/tree_empty_root.png";
+			else if (isOpening) data.icon = "styles/gradient/custom/tree/tree_opened_root.png";
+			else data.icon = "styles/gradient/custom/tree/tree_closed_root.png";
 			
 			if (icon != null) {
 				icon = _squeezeIcon(icon);
@@ -198,7 +198,7 @@ class TreeViewItemContent {
 
 			//////////////
 			
-			var vline = Assets.getBitmapData(UII.tree_vertical_line__png);
+			var vline = Assets.getBitmapData("styles/gradient/custom/tree/tree_vertical_line.png");
 			var w = vline.width * getLayerIndex();
 			if (tree.showRoot) w += vline.width;
 			var h = vline.height;
@@ -223,16 +223,16 @@ class TreeViewItemContent {
 			pos -= vline.width;
 			var bd:BitmapData;
 			if (isLastItem()) {
-				if (countChildren() == 0) bd = Assets.getBitmapData(UII.tree_last_empty_node__png);
+				if (countChildren() == 0) bd = Assets.getBitmapData("styles/gradient/custom/tree/tree_last_empty_node.png");
 				else {
-					if (isOpening) bd = Assets.getBitmapData(UII.tree_last_opened_node__png);
-					else bd = Assets.getBitmapData(UII.tree_last_closed_node__png);
+					if (isOpening) bd = Assets.getBitmapData("styles/gradient/custom/tree/tree_last_opened_node.png");
+					else bd = Assets.getBitmapData("styles/gradient/custom/tree/tree_last_closed_node.png");
 				}
 			} else {
-				if (countChildren() == 0) bd = Assets.getBitmapData(UII.tree_mid_empty_node__png);
+				if (countChildren() == 0) bd = Assets.getBitmapData("styles/gradient/custom/tree/tree_mid_empty_node.png");
 				else {
-					if (isOpening) bd = Assets.getBitmapData(UII.tree_mid_opened_node__png);
-					else bd = Assets.getBitmapData(UII.tree_mid_closed_node__png);
+					if (isOpening) bd = Assets.getBitmapData("styles/gradient/custom/tree/tree_mid_opened_node.png");
+					else bd = Assets.getBitmapData("styles/gradient/custom/tree/tree_mid_closed_node.png");
 				}
 			}
 			bmd.copyPixels(bd, new Rectangle(0, 0, bd.width, h), new Point(pos));
@@ -393,7 +393,7 @@ class TreeViewItemContent {
 	}
 	
 	function _squeezeIcon(icon:BitmapData):BitmapData {
-		var h = Assets.getBitmapData(UII.tree_vertical_line__png).height;
+		var h = Assets.getBitmapData("styles/gradient/custom/tree/tree_vertical_line.png").height;
 		
 		if (icon.height > h - 4) {
 			var scale = (h - 4) / icon.height;
