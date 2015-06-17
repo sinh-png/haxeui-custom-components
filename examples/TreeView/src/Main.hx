@@ -59,7 +59,7 @@ class Main extends Sprite {
 			
 			tree.contextMenu.addMenuItem("Hide root", function(menuItem:ContextMenuItem) {
 				tree.showRoot = !tree.showRoot;
-				if (tree.showRoot) menuItem.text = "Hide root"; else menuItem.text = "Show root";
+				menuItem.text = (tree.showRoot) ? "Hide root" : "Show root";
 			});
 			
 			tree.contextMenu.addMenuSeparator();
