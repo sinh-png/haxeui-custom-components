@@ -22,14 +22,14 @@ class Main extends Sprite {
 		Toolkit.init();
 		Toolkit.openFullscreen(function(root:Root) {
 			
-			var box = new VBox();
-			box.percentWidth = box.percentHeight = 100;
-			box.style.padding = 5;
-			root.addChild(box);
+			var vbox = new VBox();
+			vbox.percentWidth = vbox.percentHeight = 100;
+			vbox.style.padding = 5;
+			root.addChild(vbox);
 			
 			var text = new Text();
 			text.text = "Right click to open context menu.";
-			box.addChild(text);
+			vbox.addChild(text);
 			
 			///////////////////////////////////////////////////////////////
 			
@@ -63,7 +63,7 @@ class Main extends Sprite {
 			
 			tree.contextMenu.addSeparator();
 			
-			var menuItemAdd = tree.contextMenu.addItem("Add item", function(menuItem) {
+			tree.contextMenu.addItem("Add item", function(menuItem) {
 				var selectedItem = (tree.selectedIndex == -1) ? tree.treeRoot : tree.selectedTreeItem;
 				
 				var vbox = new VBox();
@@ -123,7 +123,7 @@ class Main extends Sprite {
 			
 			///////////////////////////////////////////////////////////////
 			
-			box.addChild(tree);
+			vbox.addChild(tree);
 
 		});
 	}

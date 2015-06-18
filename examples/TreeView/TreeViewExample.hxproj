@@ -25,16 +25,16 @@
     <class path="W:\HaxeToolkit\haxe\lib\openfl\3,0,6" />
     <class path="W:\HaxeToolkit\haxe\lib\haxeui-custom-components\git" />
     <class path="src" />
-    <class path="bin\flash\haxe" />
+    <class path="bin\windows\neko\haxe" />
   </classpaths>
   <!-- Build options -->
   <build>
-    <option directives="haxeui=1.7.13&#xA;hscript=2.0.4&#xA;svg=1.0.8&#xA;lime=2.4.2&#xA;actuate=1.8.6&#xA;yagp=1.1.4&#xA;openfl=3.0.6&#xA;haxeui-custom-components=0.0.1&#xA;openfl-next&#xA;tools=2.4.2&#xA;no-compilation&#xA;openfl-flash&#xA;web" />
+    <option directives="haxeui=1.7.13&#xA;hscript=2.0.4&#xA;svg=1.0.8&#xA;lime=2.4.2&#xA;actuate=1.8.6&#xA;yagp=1.1.4&#xA;openfl=3.0.6&#xA;haxeui-custom-components=0.0.1&#xA;openfl-next&#xA;tools=2.4.2&#xA;no-compilation&#xA;native&#xA;lime-native&#xA;openfl-native&#xA;windows&#xA;desktop" />
     <option flashStrict="False" />
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="True" />
-    <option additional="#--macro keep('IntIterator')&#xA;-swf-version 11.2" />
+    <option additional="#--macro keep('IntIterator')&#xA;--remap flash:openfl&#xA;#--macro keep(&quot;Main&quot;)" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>

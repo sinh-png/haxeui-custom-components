@@ -140,18 +140,20 @@ class TreeViewItemContent {
 	}
 	
 	public function remove():Void {
-		for (child in children) child.remove();
-		
-		if (renderer != null) tree.removeListItem(renderer, false);
-		
-		if (parent == null) tree.treeRoot = null;
-		else {
-			var index = getIndex();
-			parent.children.remove(this);
-			if (index > 0) parent.children[index - 1]._refreshRenderer(true);
-			else parent._refreshRenderer(false);
-			parent = null;
+		if (parent == null) {
+			throw "Root item is not removable";
+			return;
 		}
+		
+		for (child in children.copy()) child.remove();
+		
+		var index = getIndex();
+		parent.children.remove(this);
+		if (index > 0) parent.children[index - 1]._refreshRenderer(true);
+		else parent._refreshRenderer(false);
+		parent = null;
+		
+		tree.removeListItem(renderer, false);
 		
 		if (onRemoved != null) onRemoved(this);
 	}
