@@ -6,7 +6,7 @@ Unofficial custom components for [HaxeUI](http://haxeui.org/).
 Currently only support desktop gradient style.
 
 ##### Demos:
-- TreeView - http://www.fastswf.com/kCXkEHs
+- [TreeView](http://www.fastswf.com/nHmRosQ)
 
 ##### Usage:
 
